@@ -1,0 +1,75 @@
+{
+  "code": {
+    "git": {
+      "commit": "ad4ae61",
+      "dirty": true
+    },
+    "ingest_sha256": "7d0ff1f630c07cca35357767d6946dea4894bce48771bc52d46602fb7454c732"
+  },
+  "counts": {
+    "rows_per_day": {
+      "1": 574255,
+      "2": 455238,
+      "3": 1070
+    },
+    "source": {
+      "fraud_rows": 890,
+      "max_step": 72,
+      "min_step": 1,
+      "rows": 1030563,
+      "sum_amount": 163817592495.44464
+    },
+    "staged": {
+      "fraud_rows": 890,
+      "max_step": 72,
+      "min_step": 1,
+      "rows": 1030563,
+      "sum_amount": 163817592495.44205
+    }
+  },
+  "duration_s": 14.6,
+  "fingerprint": "4a4a5dbd06d5abb85d0959b4b8a6644895ada2bad69db5a64380ada287442a9d",
+  "finished_at": "2026-11-02T14:17:21.823374+00:00",
+  "input": {
+    "path": "data/raw/paysim.csv",
+    "sha256": "16910f90577b0d981bf8ff289714510bb89bc71bff7d3f220f024e287e4eea6b",
+    "size_bytes": 493534783
+  },
+  "mode": "sample",
+  "output": {
+    "files": 3,
+    "partitions": 3,
+    "path": "data/staged/sample",
+    "size_bytes": 30914122
+  },
+  "reconciliation": {
+    "fraud_rows_match": true,
+    "rows_match": true,
+    "sum_amount_match": true
+  },
+  "run_id": "20261102T141707Z_4a4a5dbd",
+  "settings": {
+    "duckdb": {
+      "memory_limit": "4GB",
+      "temp_directory": "/tmp/duckdb_spill",
+      "threads": 2
+    },
+    "max_step": 72,
+    "schema": {
+      "amount": "DOUBLE",
+      "isFlaggedFraud": "TINYINT",
+      "isFraud": "TINYINT",
+      "nameDest": "VARCHAR",
+      "nameOrig": "VARCHAR",
+      "newbalanceDest": "DOUBLE",
+      "newbalanceOrig": "DOUBLE",
+      "oldbalanceDest": "DOUBLE",
+      "oldbalanceOrg": "DOUBLE",
+      "step": "INTEGER",
+      "type": "VARCHAR"
+    }
+  },
+  "stage": "ingest",
+  "started_at": "2026-11-02T14:17:07.223878+00:00",
+  "status": "success"
+}

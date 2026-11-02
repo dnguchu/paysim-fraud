@@ -1,0 +1,12 @@
+paths:
+  raw_csv: data/raw/paysim.csv        # point this at your downloaded file name
+  staged_dir: data/staged             # Parquet lands in data/staged/<mode>/day=N/
+  manifest_dir: outputs/manifests
+ 
+ingest:
+  sample_max_step: 72                 # --sample keeps steps 1..72 (first 3 days)
+ 
+duckdb:
+  memory_limit: 4GB
+  threads: 2
+  temp_directory: /tmp/duckdb_spill
